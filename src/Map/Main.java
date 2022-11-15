@@ -29,6 +29,8 @@ public class Main extends javax.swing.JFrame {
 
         background1 = new Swings.Background();
         mainFrame = new Components.Frame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        panelItem1 = new Swings.panelItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -37,15 +39,19 @@ public class Main extends javax.swing.JFrame {
 
         mainFrame.setBackground(new java.awt.Color(0, 0, 51));
 
+        jScrollPane1.setViewportView(panelItem1);
+
         javax.swing.GroupLayout mainFrameLayout = new javax.swing.GroupLayout(mainFrame);
         mainFrame.setLayout(mainFrameLayout);
         mainFrameLayout.setHorizontalGroup(
             mainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 869, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainFrameLayout.createSequentialGroup()
+                .addGap(0, 615, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         mainFrameLayout.setVerticalGroup(
             mainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 359, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
@@ -122,6 +128,8 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Swings.Background background1;
+    private javax.swing.JScrollPane jScrollPane1;
     private Components.Frame mainFrame;
+    private Swings.panelItem panelItem1;
     // End of variables declaration//GEN-END:variables
 }
