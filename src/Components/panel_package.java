@@ -11,6 +11,28 @@ import java.text.DecimalFormat;
 
 public class panel_package extends javax.swing.JPanel {
 
+    /**
+     * @return the data
+     */
+    public model_menu getData() {
+        return data;
+    }
+
+    /**
+     * @return the select
+     */
+    public boolean isSelect() {
+        return select;
+    }
+
+    /**
+     * @param select the select to set
+     */
+    public void setSelect(boolean select) {
+        this.select = select;
+    }
+
+    private boolean select;
     
     public panel_package() {
         initComponents();
@@ -102,6 +124,10 @@ public class panel_package extends javax.swing.JPanel {
          g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(new Color(150,222,100));
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+        if (select) {
+            g2.setColor(Color.red);
+            g2.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, 20, 20);
+        }
         g2.dispose();    
         super.paint(g); 
     }
