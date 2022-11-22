@@ -1,10 +1,12 @@
 
 package Components;
 
+import Swings.model_menu;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.text.DecimalFormat;
 
 
 public class panel_package extends javax.swing.JPanel {
@@ -14,8 +16,15 @@ public class panel_package extends javax.swing.JPanel {
         initComponents();
     }
 
-    private void getData(){
-        
+    private model_menu data;
+    
+    private void getData(model_menu data){
+        this.data = data;
+        stringy1.setText(data.getDescrip());
+        stringy2.setText(data.getName());
+        picture.setImage(data.getImage());
+        DecimalFormat df = new DecimalFormat("N#,##0.00");
+        dubly.setText(df.format(data.getAmount()));
     }
  
     @SuppressWarnings("unchecked")
@@ -24,30 +33,30 @@ public class panel_package extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        pictureBox1 = new Swings.PictureBox();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        stringy1 = new javax.swing.JLabel();
+        dubly = new javax.swing.JLabel();
+        picture = new Swings.PictureBox();
+        inty = new javax.swing.JLabel();
+        stringy2 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
         jLabel2.setText("jLabel2");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Numb:");
+        stringy1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        stringy1.setText("Numb:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("N:00");
+        dubly.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dubly.setText("N0:00");
 
-        pictureBox1.setImage(new javax.swing.ImageIcon(getClass().getResource("/image/pics/shirt.png"))); // NOI18N
+        picture.setImage(new javax.swing.ImageIcon(getClass().getResource("/image/pics/shirt.png"))); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Description:");
+        inty.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        inty.setForeground(new java.awt.Color(102, 102, 102));
+        inty.setText("0:00");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("TYPE");
+        stringy2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stringy2.setText("TYPE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -57,17 +66,17 @@ public class panel_package extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(stringy1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5))
+                        .addComponent(inty))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(stringy2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(73, 73, 73)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dubly, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(pictureBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -75,15 +84,15 @@ public class panel_package extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3))
+                    .addComponent(inty)
+                    .addComponent(stringy1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pictureBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addContainerGap(10, Short.MAX_VALUE))
+                    .addComponent(dubly)
+                    .addComponent(stringy2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -100,12 +109,12 @@ public class panel_package extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dubly;
+    private javax.swing.JLabel inty;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private Swings.PictureBox pictureBox1;
+    private Swings.PictureBox picture;
+    private javax.swing.JLabel stringy1;
+    private javax.swing.JLabel stringy2;
     // End of variables declaration//GEN-END:variables
 }
