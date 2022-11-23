@@ -1,6 +1,7 @@
 
 package Components;
 
+import Swings.WrapLayout;
 import java.awt.Color;
 
 /**
@@ -13,6 +14,7 @@ public class pane_carrier extends javax.swing.JPanel {
     public pane_carrier() {
         initComponents();
         setBackground(new Color(255,255,255));
+        setLayout(new WrapLayout(WrapLayout.LEFT, 10,10));
     }
 
 
