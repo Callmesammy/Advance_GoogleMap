@@ -1,6 +1,8 @@
 package Components;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.BoxLayout;
 
 
 
@@ -14,6 +16,8 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         setBackground(new Color(0,0,0,0));
         item = new panelitem();
+        background1.setLayout(new BorderLayout());
+      
         background1.add(item);
     
     }
