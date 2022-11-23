@@ -5,6 +5,7 @@ import Swings.Model_menu;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.text.DecimalFormat;
 
 
 public class panel_carrier extends javax.swing.JPanel {
@@ -35,7 +36,12 @@ public class panel_carrier extends javax.swing.JPanel {
         this.menu = menu;
         string.setText(menu.getName());
         desc.setText(menu.getDescription());
-        
+        pictureBox1.setImage(menu.getImgage());
+        DecimalFormat fr = new DecimalFormat("N#,##0.##");
+       
+        dubly.setText(fr.format(menu.getAmount()));
+         DecimalFormat fk = new DecimalFormat("#");
+         inty.setText(fk.format(menu.getNumber()));
     }
 
    
