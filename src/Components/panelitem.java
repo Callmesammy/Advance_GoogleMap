@@ -1,6 +1,8 @@
 
 package Components;
 
+import Swings.Model_menu;
+
 
 public class panelitem extends javax.swing.JPanel {
 
@@ -10,6 +12,9 @@ public class panelitem extends javax.swing.JPanel {
         setOpaque(false);
     }
 
+    public void addItem(Model_menu data){
+        pane_carrier cr = new pane_carrier();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

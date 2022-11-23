@@ -11,6 +11,13 @@ import java.text.DecimalFormat;
 public class panel_carrier extends javax.swing.JPanel {
 
     /**
+     * @return the menu
+     */
+    public Model_menu getMenu() {
+        return menu;
+    }
+
+    /**
      * @return the select
      */
     public boolean isSelect() {
