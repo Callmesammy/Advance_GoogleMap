@@ -4,6 +4,8 @@
  */
 package Swings;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author user
@@ -53,6 +55,20 @@ public class Model_menu {
     }
 
     /**
+     * @return the imgage
+     */
+    public Icon getImgage() {
+        return imgage;
+    }
+
+    /**
+     * @param imgage the imgage to set
+     */
+    public void setImgage(Icon imgage) {
+        this.imgage = imgage;
+    }
+
+    /**
      * @return the amount
      */
     public double getAmount() {
@@ -68,18 +84,19 @@ public class Model_menu {
     private int number;
     private String name;
     private String description;
+    private Icon imgage;
     private double amount;
 
     public Model_menu() {
     }
 
-    public Model_menu(int number, String name, String description, double amount) {
+    public Model_menu(int number, String name, String description, Icon imgage, double amount) {
         this.number = number;
         this.name = name;
         this.description = description;
+        this.imgage = imgage;
         this.amount = amount;
     }
-    
     
     
 }
