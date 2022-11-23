@@ -13,6 +13,10 @@ public class panel_carrier extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
     }
+    
+    private void data(){
+        
+    }
 
    
     @SuppressWarnings("unchecked")
