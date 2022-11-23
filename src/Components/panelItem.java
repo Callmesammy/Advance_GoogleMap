@@ -1,6 +1,9 @@
+package Components;
 
-package Swings;
 
+
+
+import Swings.WrapLayout;
 import java.awt.Color;
 
 

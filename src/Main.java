@@ -1,5 +1,5 @@
 
-package Map;
+
 
 import Components.PandelFrame;
 import java.awt.BorderLayout;
@@ -30,9 +30,6 @@ public class Main extends javax.swing.JFrame {
         background1 = new Swings.Background();
         mainFrame = new Components.Frame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        panelItem1 = new Swings.panelItem();
-        panel_package1 = new Components.panel_package();
-        panel_package2 = new Components.panel_package();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -41,22 +38,15 @@ public class Main extends javax.swing.JFrame {
 
         mainFrame.setBackground(new java.awt.Color(0, 0, 51));
 
-        panelItem1.add(panel_package1);
-        panelItem1.add(panel_package2);
-
-        jScrollPane1.setViewportView(panelItem1);
-
         javax.swing.GroupLayout mainFrameLayout = new javax.swing.GroupLayout(mainFrame);
         mainFrame.setLayout(mainFrameLayout);
         mainFrameLayout.setHorizontalGroup(
             mainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainFrameLayout.createSequentialGroup()
-                .addGap(0, 254, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 248, Short.MAX_VALUE)
         );
         mainFrameLayout.setVerticalGroup(
             mainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
@@ -66,14 +56,19 @@ public class Main extends javax.swing.JFrame {
             .addGroup(background1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(mainFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
+            .addGroup(background1Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
-                .addComponent(mainFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(49, 49, 49))
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mainFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -135,8 +130,5 @@ public class Main extends javax.swing.JFrame {
     private Swings.Background background1;
     private javax.swing.JScrollPane jScrollPane1;
     private Components.Frame mainFrame;
-    private Swings.panelItem panelItem1;
-    private Components.panel_package panel_package1;
-    private Components.panel_package panel_package2;
     // End of variables declaration//GEN-END:variables
 }
