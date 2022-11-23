@@ -30,11 +30,16 @@ public class Main extends javax.swing.JFrame {
         background1 = new Swings.Background();
         jScrollPane1 = new javax.swing.JScrollPane();
         pane_carrier1 = new Components.pane_carrier();
+        panel_carrier1 = new Components.panel_carrier();
+        panel_carrier2 = new Components.panel_carrier();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         background1.setBackground(new java.awt.Color(153, 0, 51));
+
+        pane_carrier1.add(panel_carrier1);
+        pane_carrier1.add(panel_carrier2);
 
         jScrollPane1.setViewportView(pane_carrier1);
 
@@ -107,5 +112,7 @@ public class Main extends javax.swing.JFrame {
     private Swings.Background background1;
     private javax.swing.JScrollPane jScrollPane1;
     private Components.pane_carrier pane_carrier1;
+    private Components.panel_carrier panel_carrier1;
+    private Components.panel_carrier panel_carrier2;
     // End of variables declaration//GEN-END:variables
 }
