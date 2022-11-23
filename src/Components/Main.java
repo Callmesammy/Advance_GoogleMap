@@ -8,10 +8,13 @@ import java.awt.Color;
 
 public class Main extends javax.swing.JFrame {
 
+    panelitem item;
      
     public Main() {
         initComponents();
         setBackground(new Color(0,0,0,0));
+        item = new panelitem();
+        background1.add(item);
     
     }
 
