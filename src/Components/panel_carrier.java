@@ -1,6 +1,7 @@
 
 package Components;
 
+import Swings.Model_menu;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -8,13 +9,29 @@ import java.awt.RenderingHints;
 
 public class panel_carrier extends javax.swing.JPanel {
 
+    /**
+     * @return the select
+     */
+    public boolean isSelect() {
+        return select;
+    }
+
+    /**
+     * @param select the select to set
+     */
+    public void setSelect(boolean select) {
+        this.select = select;
+    }
+
+  private boolean  select;
   
     public panel_carrier() {
         initComponents();
         setOpaque(false);
     }
+    private Model_menu menu;
     
-    private void data(){
+    private void data(Model_menu menu){
         
     }
 
